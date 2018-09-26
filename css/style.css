@@ -46,6 +46,12 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 150px;
 }
 
+.imgHat{
+  height: 120px;
+  width: 120px;
+  /* border-radius: 150px; */
+}
+
 .imgPanel{
   height: 300px;
   width: 380px;
@@ -625,7 +631,7 @@ body.offcanvas {
     height: 100px;
     display: table;
     text-align: center;
-    background: rgba(0, 0, 0, 0.03);
+    background: rgba(0, 0, 0, 0.09);
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     -ms-border-radius: 2px;
