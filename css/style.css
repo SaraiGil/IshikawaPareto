@@ -7,7 +7,7 @@
 
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *	Edit this section
 *
 * ======================================================= */
@@ -39,6 +39,29 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Quicksand", Arial, sans-serif;
   font-weight: 400;
   margin: 0 0 30px 0; }
+
+.imgAbout{
+  height: 150px;
+  width: 150px;
+  border-radius: 150px;
+}
+
+.linkNav{
+  font-size: 1em !important;
+  margin-bottom: 30px !important;
+}
+
+.centrar{
+  text-align: center;
+}
+
+.contenido{
+  text-align: justify;
+  width: 80%;
+  margin-left: 10%;
+  right: 20%;
+  /* background-color: gray; */
+}
 
 figure {
   margin-bottom: 2.5em;
@@ -606,7 +629,7 @@ body.offcanvas {
         .colorlib-feature .colorlib-icon i {
           font-size: 40px; } }
   .colorlib-feature .colorlib-text {
-    padding-left: 120px;
+    padding-left: 180px;
     width: 100%; }
     .colorlib-feature .colorlib-text h2, .colorlib-feature .colorlib-text h3 {
       margin: 0;
