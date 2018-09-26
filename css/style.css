@@ -46,6 +46,12 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 150px;
 }
 
+.imgPanel{
+  height: 300px;
+  width: 380px;
+  /* border-radius: 150px; */
+}
+
 .linkNav{
   font-size: 1em !important;
   margin-bottom: 30px !important;
@@ -53,6 +59,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .centrar{
   text-align: center;
+}
+
+.texto{
+  color: #FFF;
+  font-weight: bold;
 }
 
 .contenido{
