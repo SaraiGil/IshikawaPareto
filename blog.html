@@ -48,6 +48,8 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+	<script type="text/javascript" src="js/diagramas.js"></script>
+
 	</head>
 	<body>
 	<div id="colorlib-page">
@@ -126,16 +128,16 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 							<div class="blog-entry">
 								<div class="desc">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Título/Nombre del Problema">
+										<input type="text" class="form-control" placeholder="Título/Nombre del Problema" id="prob">
 									</div>
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Causa 1">
+										<input type="text" class="form-control" placeholder="Causa 1" id="c1">
 									</div>
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Causa 2">
+										<input type="text" class="form-control" placeholder="Causa 2" id="c2">
 									</div>
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Causa 3">
+										<input type="text" class="form-control" placeholder="Causa 3" id="c3">
 									</div>
 								</div>
 							</div>
@@ -144,16 +146,16 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 							<div class="blog-entry">
 								<div class="desc">
 									<div class="form-group">
-										<input type="submit" class="btn btn-primary btn-send-message" value="Generar diagrama">
+										<button type="submit" class="btn btn-primary btn-send-message" value="Generar diagrama" onclick="generarDiagramas()">Mostrar Diagrama</button>
 									</div>
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Causa 4">
+										<input type="text" class="form-control" placeholder="Causa 4" id="c4">
 									</div>
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Causa 5">
+										<input type="text" class="form-control" placeholder="Causa 5" id="c5">
 									</div>
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Causa 6">
+										<input type="text" class="form-control" placeholder="Causa 6" id="c6">
 									</div>
 								</div>
 							</div>

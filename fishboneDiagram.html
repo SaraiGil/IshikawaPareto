@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Diagramas (usando "d3 Fishbone diagram")</title>
+		<meta charset="utf-8">
+		<style>
+			@import url("css/fishbonestyle.css");
+		</style>
+	</head>
+	<body>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.1/d3.min.js" charset="utf-8"></script>
+		<script src="js/d3.fishbone.js" charset="utf-8"></script>
+		<script>
+			//Crea el modificador de seleccion configurable
+			var fishbone = d3.fishbone();
+
+			//Carga los datos
+			d3.json("./dato.json", function(data)
+			{
+				//La mejor forma de obtener el tamaño de pantalla
+				var size = (function()
+				{
+					return {width: this.clientWidth, height: this.clientHeight};
+		  		}).bind(window.document.documentElement),
+		  		svg = d3.select("body")
+		  		.append("svg")
+		  		//Firefox necesita un tamaño real
+		  		.attr(size())
+		  		//Coloca los datos para que el diagrama reusable pueda encontrarlos
+		  		.datum(data)
+		  		//Pon la 'cabeza de flecha' por defecto
+		  		.call(fishbone.defaultArrow)
+		  		//Llama al modificador de selección
+		  		.call(fishbone);
+
+				//Esta es la 'Fuerza', iniciala
+				fishbone.force().start();
+
+				//Permite el cambio de tamaño de la ventana
+				d3.select(window).on("resize", function()
+				{
+					fishbone.force()
+				.size([size().width, size().height])
+				.start();
+		  		svg.attr(size())
+				});
+
+	  		});
+	</script>
+  </body>
+</html>

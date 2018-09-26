@@ -1,0 +1,12 @@
+{
+  "name": "Problematica",
+  "children":
+  [
+    {"name": "Causa 1"},
+    {"name": "Causa 2"},
+    {"name": "Causa 3"},
+    {"name": "Causa 4"},
+    {"name": "Causa 5"},
+    {"name": "Causa 6"}
+  ]
+}

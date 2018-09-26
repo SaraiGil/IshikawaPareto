@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<script>
+			function numRandom(min, max)
+			{
+			    return Math.floor(Math.random() * (max - min + 1) ) + min;
+			}
+
+			var url_string = window.location.href;
+			var url = new URL(url_string);
+			var p = url.searchParams.get("p");
+			var c1 = url.searchParams.get("c1");
+			var c2 = url.searchParams.get("c2");
+			var c3 = url.searchParams.get("c3");
+			var c4 = url.searchParams.get("c4");
+			var c5 = url.searchParams.get("c5");
+			var c6 = url.searchParams.get("c6");
+
+			var minNow = 1;
+			var maxNow = 1000;
+
+			if(c6 != null && c6 != "")
+			{
+				var vc6 = numRandom(minNow, maxNow);
+				minNow = maxNow;
+				maxNow = vc6 * 3;
+			}
+			else
+			{
+				vc6 = 0;
+			}
+			if(c5 != null && c5 != "")
+			{
+				var vc5 = numRandom(minNow, maxNow);
+				minNow = maxNow;
+				maxNow = vc5 * 3;
+			}
+			else
+			{
+				vc5 = 0;
+			}
+			if(c4 != null && c4 != "")
+			{
+				var vc4 = numRandom(minNow, maxNow);
+				minNow = maxNow;
+				maxNow = vc4 * 3;
+			}
+			else
+			{
+				vc4 = 0;
+			}
+			if(c3 != null && c3 != "")
+			{
+				var vc3 = numRandom(minNow, maxNow);
+				minNow = maxNow;
+				maxNow = vc3 * 3;
+			}
+			else
+			{
+				vc3 = 0;
+			}
+			if(c2 != null && c2 != "")
+			{
+				var vc2 = numRandom(minNow, maxNow);
+				minNow = maxNow;
+				maxNow = vc2 * 3;
+			}
+			else
+			{
+				vc2 = 0;
+			}
+			var vc1 = numRandom(minNow, maxNow);
+
+			window.onload = function ()
+			{
+				var chart = new CanvasJS.Chart("chartContainer",
+				{
+					title:
+					{
+						text: p
+					},
+					axisY:
+					{
+						lineColor: "#4F81BC",
+						tickColor: "#4F81BC",
+						labelFontColor: "#4F81BC"
+					},
+					axisY2:
+					{
+						title: "Porcentaje",
+						suffix: "%",
+						lineColor: "#C0504E",
+						tickColor: "#C0504E",
+						labelFontColor: "#C0504E"
+					},
+					data:
+					[{
+						type: "column",
+						dataPoints:
+						[
+							{ label: c1, y: vc1 },
+							{ label: c2, y: vc2 },
+							{ label: c3, y: vc3 },
+							{ label: c4, y: vc4 },
+							{ label: c5, y: vc5 },
+							{ label: c6, y: vc6 }
+						]
+					}]
+				});
+				chart.render();
+				createPareto();
+
+				function createPareto()
+				{
+					var dps = [];
+					var yValue, yTotal = 0, yPercent = 0;
+
+					for(var i = 0; i < chart.data[0].dataPoints.length; i++)
+					yTotal += chart.data[0].dataPoints[i].y;
+
+					for(var i = 0; i < chart.data[0].dataPoints.length; i++)
+					{
+						yValue = chart.data[0].dataPoints[i].y;
+						yPercent += (yValue / yTotal * 100);
+						dps.push({label: chart.data[0].dataPoints[i].label, y: yPercent});
+					}
+
+					chart.addTo("data",{type:"line", yValueFormatString: "0.##\"%\"", dataPoints: dps});
+					chart.data[1].set("axisYType", "secondary", false);
+					chart.axisY[0].set("maximum", yTotal);
+					chart.axisY2[0].set("maximum", 100);
+				}
+
+			}
+		</script>
+	</head>
+	<body>
+		<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+		<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	</body>
+</html>
