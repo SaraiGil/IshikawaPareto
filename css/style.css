@@ -327,7 +327,7 @@ figure {
           bottom: 0;
           right: -15px;
           padding: 30px;
-          background: #FFC300; }
+          background: #FFD200; }
           @media screen and (max-width: 768px) {
             #colorlib-hero .flexslider .slider-text > .slider-text-inner .desc {
               right: 0;
@@ -1131,8 +1131,12 @@ body.offcanvas {
   -webkit-box-shadow: none;
   box-shadow: none;
   background: transparent;
-  border: transparent;
-  background: #fafafa;
+  /* border: transparent; */
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  border-bottom: 2px solid #A0A0A0 ;
+  background: #f1f1f1;
   height: 54px;
   font-size: 16px;
   font-weight: 400;
@@ -1142,13 +1146,30 @@ body.offcanvas {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
-  border-radius: 0; }
+  border-radius: 0;
+  margin-bottom: 5px; }
   .form-control:active, .form-control:focus {
     outline: none;
     -webkit-box-shadow: none;
     box-shadow: none;
     border-color: transparent;
     background: #f0f0f0; }
+
+  .formTitle{
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  .formInputs{
+    height: 40px;
+  }
+  .yellow{color: #FADE00;}
+  .white{background-color: #000; color: #FFF;}
+  .green{color: #01C500;}
+  .blue{color: #0000FF;}
+  .black{color: #000;}
+  .red{color: #FF0000;}
 
 #message {
   height: 130px; }

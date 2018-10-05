@@ -88,7 +88,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
 							<span class="heading-meta">Actividad</span>
-							<h2 class="colorlib-heading">Pareto e Ishikawa</h2>
+							<h2 class="colorlib-heading">6 Sombreros para Pensar</h2>
 						</div>
 					</div>
 					<div class="row">
@@ -98,7 +98,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 								<div class="desc">
 									<!-- <span><small>April 14, 2018 </small> | <small> Web Design </small> | <small> <i class="icon-bubble3"></i> 4</small></span> -->
 									<h3>1. INSTRUCCIONES</h3>
-									<p>A continuación, se presenta una actividad para ver el funcionamiento de los diagramas anteriores vistos, el de Ishikawa y el de Pareto.</p>
+									<p>A continuación, se presenta una actividad para ver un ejemplo del uso de los 6 Sombreros para Pensar.</p>
 								</div>
 							</div>
 						</div>
@@ -107,8 +107,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 								<!-- <a href="blog.html" class="blog-img"><img src="images/blog-2.jpg" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a> -->
 								<div class="desc">
 									<!-- <span><small>April 14, 2018 </small> | <small> Web Design </small> | <small> <i class="icon-bubble3"></i> 4</small></span> -->
-									<h3>2. ATENCIÓN</h3>
-									<p>Indica en cada espacio en blanco, comenzando por el título del problema que desees, seguido de 6 causas que lo generan.</p>
+									<h3>2. Título de la problemática</h3>
+									<p>Indica en el primer espacio el nombre del problema que desees.</p>
 								</div>
 							</div>
 						</div>
@@ -117,32 +117,19 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 								<!-- <a href="blog.html" class="blog-img"><img src="images/blog-3.jpg" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a> -->
 								<div class="desc">
 									<!-- <span><small>April 14, 2018 </small> | <small> Inspiration </small> | <small> <i class="icon-bubble3"></i> 4</small></span> -->
-									<h3>3. NO OLVIDES</h3>
-									<p>Llenar todos los campos, y después dar clic al botón de "Diagrama", para generar los diagramas correspondientes. Suerte!</p>
+									<h3>3. 6 Sombreros</h3>
+									<p>En cada sección, aparecerán 4 espacios en blanco que deberás llenar de acuerdo a la problemática que elegiste, y a cada uno de los diferentes sombreros para pensar. ¡Suerte!</p>
 								</div>
 							</div>
 						</div>
 					</div>
 
 					<div  class="row">
-						<div class="col-md-6 col-sm-2 animate-box" data-animate-effect="fadeInLeft">
+						<div class="row">
 							<div class="blog-entry">
 								<div class="desc">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Título/Nombre del Problema" id="prob">
-									</div>
-								</div>
-							</div>
-							<div class="blog-entry">
-								<div class="desc">
-									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Causa 1" id="c1">
-									</div>
-									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Causa 2" id="c2">
-									</div>
-									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Causa 3" id="c3">
+										<input type="text" class="form-control formTitle" placeholder="Título/Nombre del Problema" id="prob">
 									</div>
 								</div>
 							</div>
@@ -151,45 +138,80 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 							<div class="blog-entry">
 								<div class="desc">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Equis" style="display: none;"><br><br>
+										<p><b class="white">Sombrero Blanco: </b>Describe cuáles son los datos concretos que se tienen respecto al problema.</p>
+										<input type="text" class="form-control formInputs" placeholder="Dato 1" id="c1">
+										<input type="text" class="form-control formInputs" placeholder="Dato 2" id="c2">
+										<input type="text" class="form-control formInputs" placeholder="Dato 3" id="c3">
+										<input type="text" class="form-control formInputs" placeholder="Dato 4" id="c4">
 									</div>
 								</div>
 							</div>
 							<div class="blog-entry">
 								<div class="desc">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Causa 4" id="c4">
-									</div>
-									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Causa 5" id="c5">
-									</div>
-									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Causa 6" id="c6">
+										<p><b class="yellow">Sombrero Amarillo: </b>Describe las cosas positivas respecto al problema.</p>
+										<input type="text" class="form-control formInputs" placeholder="Dato 1" id="c1">
+										<input type="text" class="form-control formInputs" placeholder="Dato 2" id="c2">
+										<input type="text" class="form-control formInputs" placeholder="Dato 3" id="c3">
+										<input type="text" class="form-control formInputs" placeholder="Dato 4" id="c4">
 									</div>
 								</div>
 							</div>
 							<div class="blog-entry">
 								<div class="desc">
 									<div class="form-group">
-										<button type="submit" class="btn btn-primary btn-send-message" value="Generar diagrama" onclick="generarDiagramas()">Mostrar Diagrama</button>
+										<p><b class="red">Sombrero Rojo: </b>Describe cuáles son tus sentimientos y pensamientos con el problema.</p>
+										<input type="text" class="form-control formInputs" placeholder="Dato 1" id="c1">
+										<input type="text" class="form-control formInputs" placeholder="Dato 2" id="c2">
+										<input type="text" class="form-control formInputs" placeholder="Dato 3" id="c3">
+										<input type="text" class="form-control formInputs" placeholder="Dato 4" id="c4">
 									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-2 animate-box" data-animate-effect="fadeInLeft">
+							<div class="blog-entry">
+								<div class="desc">
+									<div class="form-group">
+										<p><b class="green">Sombrero Verde: </b>Describe alguna idea creativa o innovadora que pueda mejorar el problema.</p>
+										<input type="text" class="form-control formInputs" placeholder="Dato 1" id="c1">
+										<input type="text" class="form-control formInputs" placeholder="Dato 2" id="c2">
+										<input type="text" class="form-control formInputs" placeholder="Dato 3" id="c3">
+										<input type="text" class="form-control formInputs" placeholder="Dato 4" id="c4">
+									</div>
+								</div>
+							</div>
+							<div class="blog-entry">
+								<div class="desc">
+									<div class="form-group">
+										<p><b class="black">Sombrero Negro: </b>Describe las ideas y situaciones negativas relacionadas con el problema.</p>
+										<input type="text" class="form-control formInputs" placeholder="Dato 1" id="c1">
+										<input type="text" class="form-control formInputs" placeholder="Dato 2" id="c2">
+										<input type="text" class="form-control formInputs" placeholder="Dato 3" id="c3">
+										<input type="text" class="form-control formInputs" placeholder="Dato 4" id="c4">
+									</div>
+								</div>
+							</div>
+							<div class="blog-entry">
+								<div class="desc">
+									<div class="form-group">
+										<p><b class="blue">Sombrero Azul: </b>Describe de que manera gestionar y organizas la situación o problema.</p>
+										<input type="text" class="form-control formInputs" placeholder="Dato 1" id="c1">
+										<input type="text" class="form-control formInputs" placeholder="Dato 2" id="c2">
+										<input type="text" class="form-control formInputs" placeholder="Dato 3" id="c3">
+										<input type="text" class="form-control formInputs" placeholder="Dato 4" id="c4">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="blog-entry">
+							<div class="desc">
+								<div class="form-group">
+									<button type="submit" class="btn btn-primary btn-send-message formTitle" value="Generar diagrama" onclick="generarDiagramas()">Mostrar Diagrama</button>
 								</div>
 							</div>
 						</div>
 					</div>
-
-					<!-- <div class="row">
-						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-							<ul class="pagination">
-								<li class="disabled"><a href="#">&laquo;</a></li>
-								<li class="active"><a href="#">1</a></li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><a href="#">4</a></li>
-								<li><a href="#">&raquo;</a></li>
-							</ul>
-						</div>
-					</div> -->
 				</div>
 			</div>
 
